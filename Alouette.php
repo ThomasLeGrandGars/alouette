@@ -6,6 +6,14 @@ class Alouette {
 	 * @param string $qualite - La qualité que l'on donne à l'oiseau (gentille)
 	 * @return string
 	 */
+	static public function titre($oiseau, $qualite)
+	{
+		$resultats = '';
+		$resultats .= '';
+		$resultats .= '<div>'.$oiseau.', '.$qualite.' '.$oiseau.'</div>';
+		$resultats .= '<div>'.$oiseau.', je te plumerai.</div>';
+		return $resultats;
+	}
 
 
 	/** Méthode chanson
@@ -81,6 +89,14 @@ class Alouette {
 	 * @uses appelReponse
 	 * @return string
 	 */
+	static public function actionMembre($action, $membre)
+	{
+		$resultats = '';
+		$resultats .= '';
+		$resultats .= '<div class="appel">Je '.$action.' '.$membre.'</div>';
+		$resultats .= '<div class="reponse">Je '.$action.' '.$membre.'</div>';
+		return $resultats;
+	}
 
 
 }

@@ -1,3 +1,7 @@
+<?php
+include("../Alouette.php");
+include("../donnees.inc.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,16 +30,14 @@
 				<div class="strophe">
 					<div class="refrain">
 						<div class="appel">
-							<div>Alouette, gentille Alouette</div>
-							<div>Alouette, je te plumerai.</div>
+							<?php echo Alouette::titre($oiseau, $qualite); ?>
 						</div>
 						<div class="reponse">
 							<div>Alouette, gentille Alouette</div>
 							<div>Alouette, je te plumerai.</div>
 						</div>
 					</div>
-					<div class="appel">Je te plumerai la tête</div>
-					<div class="reponse">Je te plumerai la tête</div>
+					<?php echo Alouette::actionMembre($action, 'les bras'); ?>
 					<div class="appel">Et la tête</div>
 					<div class="reponse">Et la tête</div>
 					<div class="appel">Alouette</div>

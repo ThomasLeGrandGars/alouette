@@ -1,7 +1,7 @@
 <?php
-$oiseau    = 'Alouette';
-$qualite   = 'gentille';
-$action    = 'te plumerai';
+$oiseau    = 'Fauxcon';
+$qualite   = 'mauvais';
+$action    = 't\'arracherai';
 $membres[] = 'la tête';
 $membres[] = 'le bec';
 $membres[] = 'les yeux';
