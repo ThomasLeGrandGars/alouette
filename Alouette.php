@@ -122,4 +122,34 @@ class Alouette {
 		$resultat = self::appelReponse('Je '.$action.' '.$membre);
 		return $resultat;
 	}
+
+	static public function formulaire($donnees){
+		$resultat = '';
+		$resultat .= '<form action="perso.php" methode="get">';
+		$resultat .= '<div>';
+		$resultat .= '<label for="oiseau">Oiseau</label>';
+		$resultat .= '<input type="text" name="oiseau" id="oiseau" value="'.$donnees['oiseau'].'"/>';
+		$resultat .= '</div>';
+		$resultat .= '<div>';
+		$resultat .= '<label for="qualite">Qualité</label>';
+		$resultat .= '<input type="text" name="qualite" id="qualite" value="'.$donnees['qualite'].'" />';
+		$resultat .= '</div>';
+		$resultat .= '<div>';
+		$resultat .= '<label for="action">Actions</label>';
+		$resultat .= '<input type="text" name="action" id="action" value="'.$donnees['action'].'" />';
+		$resultat .= '</div>';
+		$resultat .= '<div>';
+		$resultat .= '<label for="membres">Membres</label>';
+		$resultat .= '<textarea name="membres" id="membres" cols="20" rows="9">';
+		$resultat .= implode("\n", $donnees['membres']);
+
+		$resultat .= '</textarea>';
+		$resultat .= '</div>';
+		$resultat .= '<div>';
+		$resultat .= '<input type="submit" value="Composer">';
+		$resultat .= '</div>';
+		$resultat .= '</form>';
+		return $resultat;
+	}
+
 }
